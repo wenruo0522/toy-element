@@ -16,7 +16,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-        env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE20=true
+        runs:
+          using: 'node20'
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -38,7 +39,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
-        env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE20=true
+        runs:
+          using: 'node20'
 
       - name: Install pnpm
         run: npm install -g pnpm
