@@ -15,9 +15,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v3
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION-version: true
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -38,9 +38,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@v3
-        env:
-          node-ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
       - name: Install pnpm
         run: npm install -g pnpm
